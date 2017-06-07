@@ -1,0 +1,9 @@
+To see the status of rabbitmq
+sudo rabbitmqctl status
+
+
+To stop the rabbitmq
+sudo rabbitmqctl stop
+
+To start
+sudo invoke-rc.d rabbitmq-server start

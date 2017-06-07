@@ -1,0 +1,126 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title MakeYourCollage - Start Bootstrap Theme
+    
+    link(href='../../stylesheets/bootstrap.min.css', rel='stylesheet')
+    
+    link(href='../../stylesheets/freelancer.min.css', rel='stylesheet')
+    
+    link(href='../../stylesheets/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    
+    
+    
+    script(src='../../javascripts/jquery.min.js')
+    script(src='../../javascripts/bootstrap.min.js')
+    
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='../../javascripts/jqBootstrapValidation.js')
+    script(src='../../javascripts/contact_me.js')
+    script(src="/socket.io/socket.io.js")
+    script(src='../../javascripts/freelancer.min.js')
+    script(src='../../javascripts/img_view.js')
+    script(src='../../javascripts/make_collage.js')
+    script(src='../../javascripts/notifications.js')
+    script(src='../../javascripts/show_collages.js')
+    script(src='../../javascripts/logout.js')
+    
+    script.
+      var user = '#{first_name}';
+      var id = '#{id}';
+      var myname = '#{name}';
+      var array_foto = !{photos};
+      var array_notifiche = !{notifications};
+      var collage_amici = !{collage_amici};
+      var number = '#{number_notifications}';
+      var socket = io();
+      var friends = !{friends};
+      history.pushState('','MakeYourCollage','https://collage-jhin.c9users.io/users/FBLogin/confirm');
+      
+    script.
+         $(document).ready(function(){
+              $("body").append("<script src='/javascripts/websocket.js'>");
+              $("#numNotifiche").append(number);
+          });
+    
+    style.
+      #selected{
+        1px solid #ff0;
+      }
+  body#page-top.index
+    // Navigation
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            |  Menu 
+            i.fa.fa-bars
+          a.navbar-brand(href='#page-top') Make  Your  Collage
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            button.btn.btn-success(type='button' data-toggle='modal' data-target='#myModal' onclick = 'apri_notifiche()')
+             | Notifiche  
+             #numNotifiche
+            button.btn.btn-success(onclick = 'tuoi_collage()')
+             | I tuoi <br> collage
+          
+            button.btn.btn-success(onclick = 'collages_amici()')
+             | I collage <br> dei tuoi amici
+      
+            
+        // /.navbar-collapse
+      // /.container-fluid
+    // Header
+    header
+      .container
+        .row
+          #myModal.modal.fade(role='dialog')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      b NOTIFICHE
+                      button.close(type='button', data-dismiss='modal') ×                      
+                    .modal-body
+                      #notif
+                                          
+                    .modal-footer
+                      button.btn.btn-danger(type='button', data-dismiss='modal') Close
+          .col-lg-12
+            img.img-circle(src=photo)
+            .intro-text
+              span.name(text-align = 'center') Ciao #{first_name}
+              hr.star-light(text-aligh = 'center')
+                
+             
+    section#portfolio
+      .container
+        .row
+           .form-group.col-xs-12.text-center
+            #buildzone
+              button.btn.btn-success.btn-lg(style='font-size : 4vw; width: 60vw; height: 10vw;', onclick='build()') CREA IL TUO COLLAGE!
+
+
+         
+        .row
+         
+    // About Section
+    section#about.success
+      .container
+        .row(style='margin: 0')
+          .col-lg-12.text-center
+            button.btn.btn-success.btn-lg(style ='font-size : 3vw; width: 10; height: 6vw;', onclick='esci()') Esci
+            hr.star-light
+        .row
+          // div class="col-lg-4 col-lg-offset-2"
+          .col-lg-6.col-lg-offset-4
+           

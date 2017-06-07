@@ -1,0 +1,97 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title MakeYourCollage - Start Bootstrap Theme
+    // Bootstrap Core CSS
+    
+    link(href='../../stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Theme CSS
+    
+    link(href='../../stylesheets/freelancer.min.css', rel='stylesheet')
+    // Custom Fonts
+    
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(href='../../stylesheets/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    //script(src='../../javascripts/show_collages.js')
+    
+    script(src='../../javascripts/jquery.min.js')
+    script(src='../../javascripts/bootstrap.min.js')
+    
+    script(src='../../javascripts/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='../../javascripts/jqBootstrapValidation.js')
+    script(src='../../javascripts/contact_me.js')
+    script(src='../../javascripts/freelancer.min.js')
+    
+    script.
+      var id = '#{id}';
+      var collages = '!{collage}';
+    
+    script.
+       $(document).ready(function(){
+         if(collages[0] == '£'){
+           $("#immagini").append('<img src = "../../img/no_image_available.jpg">')
+         }
+         else{
+           var data = collages.split(',https://process');
+           var i = 0;
+           console.log(data);
+              for(; i < data.length;i++){
+                if(i == 0)
+                  $("#immagini").append('<img src ="' + data[i] + '" height = "100%" width = "100%">')
+                else
+                  $("#immagini").append('<img src ="https://process' + data[i] + '" height = "100%" width = "100%">')
+                console.log('i = ' + i)
+                console.log(data.length)
+               }
+          }
+        });
+  body#page-top.index
+    // Navigation
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            |  Menu 
+            i.fa.fa-bars
+          a.navbar-brand(href='#page-top') 
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#page-top')
+
+        // /.navbar-collapse
+      // /.container-fluid
+    // Header
+    header
+      .container
+        .row
+          .col-lg-12.center
+            #immagini
+            .intro-text
+              button.btn.btn-success.btn-lg(style ='font-size : 3vw; width: 10; height: 6vw;', onclick="location.assign('https://collage-jhin.c9users.io/users/FBLogin/confirm')") Back
+              hr.star-light
+              
+    // Portfolio Grid Section
+
+    // jQuery
+    
+    // Bootstrap Core JavaScript
+    script(src='../../javascripts/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    // Contact Form JavaScript
+    script(src='../../javascripts/jqBootstrapValidation.js')
+    script(src='../../javascripts/contact_me.js')
+    // Theme JavaScript
+    script(src='../../javascripts/freelancer.min.js')
