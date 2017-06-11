@@ -266,9 +266,6 @@ var callback_6 = function(req, res, next) {
             var profile = {
                 id: req.ID
             };
-            var TOKEN = jsonwebtoken.sign(profile, SECRET, {
-                expiresIn: 1800
-            }); //1800s = 30 min
             res.render("home", {
                 name: req.USERNAME,
                 first_name: req.FIRSTNAME,
@@ -278,11 +275,8 @@ var callback_6 = function(req, res, next) {
                 photos: JSON.stringify(req.PHOTOS),
                 friends: JSON.stringify(req.FRIENDS),
                 id: req.ID,
-                at: req.crypted_accessToken,
-                asp: req.crypted_appsecretProof,
                 notifications: JSON.stringify(req.NOTIFICATIONS),
                 number_notifications: req.number,
-                token: TOKEN,
                 collage_amici: JSON.stringify(req.COLLAGE_AMICI)
             });
         }
