@@ -12,9 +12,18 @@ var app = require_server.app;
 var server = require_server.server;
 
 //***************************************************
+var jwt = require('express-jwt');
+var jsonwebtoken = require("jsonwebtoken");
+var SECRET=key.secret;
+
+var authenticate = jwt({
+  secret: SECRET,
+});
 
 var users = require('./routes/users');
 var routes = require('./routes/index');
+var api = require('./routes/api');
+
 
 
 
@@ -36,6 +45,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/api', authenticate);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
