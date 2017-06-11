@@ -12,6 +12,7 @@ var app = require_server.app;
 var server = require_server.server;
 
 //***************************************************
+var key = require('./key');
 var jwt = require('express-jwt');
 var jsonwebtoken = require("jsonwebtoken");
 var SECRET=key.secret;
