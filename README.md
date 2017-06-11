@@ -1,4 +1,4 @@
-# collage
+# COLLAGE
 
 ### [API](https://github.com/Jhin12/collage/wiki)
 
