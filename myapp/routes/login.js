@@ -274,7 +274,8 @@ var callback_6 = function(req, res, next) {
                 id: req.ID,
                 notifications: JSON.stringify(req.NOTIFICATIONS),
                 number_notifications: req.number,
-                collage_amici: JSON.stringify(req.COLLAGE_AMICI)
+                collage_amici: JSON.stringify(req.COLLAGE_AMICI),
+                token: TOKEN
             });
         }
         else {
