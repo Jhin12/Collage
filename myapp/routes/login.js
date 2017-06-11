@@ -116,9 +116,6 @@ var callback_2 = function(req, res, next) {
             else {
                 req.FRIENDS = [];
             }
-            //var cipher = crypto.createCipher(ALGORITHM, CRYPTO_PASS_RABBIT);
-            //req.crypted_id = cipher.update(JSON.parse(body).id, 'utf8', 'hex');
-            //req.crypted_id += cipher.final('hex');
             next();
         }
         else {
