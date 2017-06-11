@@ -2,8 +2,6 @@ var request = require('request');
 var crypto = require('crypto');
 var key = require('../key');
 
-var ALGORITHM = 'aes-256-ctr';
-var CRYPTO_PASS = key.crypto_pass;
 
 var APP_ID_FB = key.app_id_fb;
 var APP_SECRET_FB = key.app_secret_fb;
