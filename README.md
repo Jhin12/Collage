@@ -1,6 +1,10 @@
 # collage
 
-documentazione librerie utilizzate:
+# API
+
+
+
+# documentazione librerie utilizzate:
 
 
 FACEBOOK:
@@ -17,4 +21,3 @@ RABBITMQ:
 
 SOCKET.IO
   https://socket.io/docs/server-api/
-
