@@ -4,20 +4,15 @@
 
 
 
-### documentazione librerie utilizzate:
+### Documentazione librerie utilizzate:
 
 
-FACEBOOK:
-  https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow
+[FACEBOOK](https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow)
   
-FIREBASE:
-  https://firebase.google.com/docs/auth/
+[FIREBASE](https://firebase.google.com/docs/auth/)
   
-FILESTACK (per il collage):
-  https://www.filestack.com/docs/image-transformations/collage
+[FILESTACK](https://www.filestack.com/docs/image-transformations/collage)
   
-RABBITMQ:
-  http://www.squaremobius.net/amqp.node/channel_api.html#connect
+[RABBITMQ](http://www.squaremobius.net/amqp.node/channel_api.html#connect)
 
-SOCKET.IO
-  https://socket.io/docs/server-api/
+[SOCKET.IO](https://socket.io/docs/server-api/)
