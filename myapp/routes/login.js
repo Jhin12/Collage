@@ -17,7 +17,6 @@ var token = tokenGenerator.createToken({
     uid: key.uid_firebase
 });
 
-/*--------------- INIT TOKEN PER FIREBASE -------------*/
 var jsonwebtoken = require("jsonwebtoken");
 var SECRET = key.secret;
 
